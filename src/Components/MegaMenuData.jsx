@@ -5,9 +5,9 @@ const MegaMenuData = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("/MegaMenu.json")
+    fetch("/Megamenu.json")
       .then((res) => res.json())
-      .then((json) => setData(json));
+      .then((product) => setData(product));
   }, []);
   const datas = data.slice(0,10);
   return (

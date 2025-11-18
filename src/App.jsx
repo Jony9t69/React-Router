@@ -7,6 +7,7 @@ import Contact from './Pages/Contact.jsx'
 import Blog  from './Pages/Blog.jsx'
 import Error from './Pages/Error.jsx'
 import MegaMenuData from './Components/MegaMenuData.jsx'
+import Login from  './component/Login.jsx'
 
 const App = () => {
   const router = createBrowserRouter(
@@ -21,6 +22,7 @@ const App = () => {
         <Route path='MegaMenu' element={<MegaMenuData/>}/>
         <Route path='contact' element={<Contact/>}/>
         <Route path='*' element={<Error/>}/>
+        <Route path='Login' element={<Login/>}/>
       </Route>
       
     )

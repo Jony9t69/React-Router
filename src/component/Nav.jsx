@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { use } from 'react'
+
 import img from '../assets/Nest(1).png'
+
 import { FaFireAlt } from 'react-icons/fa'
+
 import { NavLink } from 'react-router'
+import { userContext } from '../layout/UserContext'
+
 const Nav = () => {
+const {user, logout} = use(userContext)
+const link = 
   return (
+
     <div className='flex sticky top-0 z-10 border-b border-gray-300 justify-around items-center bg-white pt-2 pb-3'>
       <div className='h-full flex items-center justify-center gap-2'>
         <img src={img} alt="" />
@@ -23,15 +31,12 @@ const Nav = () => {
             </ul>
       </div>
       <div className='flex justify-between gap-3'>
-            
-          
-            <button className="bg-green-400 hover:bg-green-500 px-5 h-fit rounded md:px-10 py-1 md:py-2 text-white font-semibold transition duration-300 ease-in-out shadow-md">
+            <button>
               Login
             </button>
             
-           
-            <div className="dropdown dropdown-end md:hidden">
-            
+          
+           <div className="dropdown dropdown-end md:hidden">
               <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
                 <svg 
                   xmlns="http://www.w3.org/2000/svg" 
@@ -40,7 +45,7 @@ const Nav = () => {
                   viewBox="0 0" 
                   stroke="currentColor"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
+                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" />
                 </svg>
               </div>
               
@@ -59,8 +64,11 @@ const Nav = () => {
             </div>
        </div>
 
+
     </div>
   )
-}
+
+} 
 
 export default Nav
+
